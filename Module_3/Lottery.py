@@ -1,7 +1,11 @@
 import random
 def get_numbers_ticket(min, max, quantity):
     empty_set = set()
-    if min >= 1 and max <= 1000:
+    if min >= 1 and max <= 1000 and min < max:
         while len(empty_set) < quantity:
             empty_set.add(random.randrange(min, max))
-    return list(empty_set)
+        result = list(empty_set)
+        result.sort()
+        return result
+    else:
+        return list(empty_set)
