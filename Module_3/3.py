@@ -2,7 +2,7 @@ import re
 def normalize_phone(phone_number):
     full_prefix = "+38"
     short_prefix = "+"
-    pattern = r"[^0-9+]"
+    pattern = r"[^0-9+]+"
     replacement = ""
     numbers_only = re.sub(pattern, replacement, phone_number)
     if numbers_only.startswith("0"):
